@@ -1,23 +1,33 @@
 import { Link } from "react-router-dom";
 import { Message } from "./Message";
 
-export default function Home(){ 
-  return( 
-   <div>  
-    <p className="text-3x1 text-center font-bold">Shan Degolacion</p>
-  <Link to="/About"><button >About</button> </Link>
-  <div className="flex flex-row gap-10">
+export default function Home() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8 text-center">
+        <h1 className="text-3xl font-bold text-gray-800">
+          Jhon Vibert Bagaipo
+        </h1>
 
-  <div className=" ml-4 mt-20 border-1 shadow-lg shadow-black/100 p-2 w-50 rounded-md bg-red-100"> 
-  <Message  card="card 1" description="desription" text="click" color="bg-red-500"/>
-  </div>
-   <div className=" ml-4 mt-20 border-1 shadow-lg shadow-black/100 p-2 w-50 rounded-md bg-red-100"> 
-  <Message  card="card 2" description="description" text="click" color="bg-red-500"/>
-  </div>
-   <div className=" ml-4 mt-20 border-1 shadow-lg shadow-black/100 p-2 w-50 rounded-md bg-red-100"> 
-  <Message  card="card 3" description="description" text="click" color="bg-red-500"/>
-  </div>
-  </div>
+        <p className="text-gray-500 mt-2">
+          Welcome to my simple React application.
+        </p>
+
+        <Link to="/About">
+          <button className="mt-6 px-5 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600">
+            About Me
+          </button>
+        </Link>
+
+        <div className="mt-8 border rounded-md p-4">
+          <Message
+            card="Card 1"
+            description="Shopee"
+            text="Click"
+            color="bg-red-500"
+          />
+        </div>
+      </div>
     </div>
-  )
+  );
 }
